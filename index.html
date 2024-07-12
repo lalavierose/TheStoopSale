@@ -1,0 +1,172 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> The Stoop Sale</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js"></script>
+  <link
+    href="https://api.tiles.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css"
+    rel="stylesheet"
+  />
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+
+  <link rel="icon" href="/favicon.png" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+<nav id="navigation">
+  <a href="#landingpage"><i class="fa fa-heart"> <br> </br>Home </i></a>
+  <a href="Catalogue.html"><i class="fa fa-heart"> <br> </br>Catalog </i></a>
+  <img id="logo" src="logo2.png" style="width: 15%;"/>
+  <a href="#location"><i class="fa fa-heart"> <br> </br>Map </i></a>
+  <a href="#contact"><i class="fa fa-heart"> <br> </br>Contact </i></a>
+</nav>
+
+<div id="landingpage">
+  <img src="Invitation2.gif" style="width:30%; padding: 0; margin: 0;"/>
+  <h1> ✦ To Brooklyn's Stoop Sale Of the Summer ✦ </h1>
+  <h5> <i class="fa fa-map-marker"> </i> Carol Gardens,The Corner of Court Street and 2nd Ave </h5>
+  <h5 id="demo"></h5>
+
+  <script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("July 15, 2024 17:37:25").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+
+      // Get today's date and time
+      var now = new Date().getTime();
+
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Output the result in an element with id="demo"
+      document.getElementById("demo").innerHTML = " ✦ At 5 pm, 15 July 2024 - " + days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ✦";
+
+      // If the count down is over, write some text
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+  </script>
+  <a href="#location"><button> Jump To Map </button></a>
+</div>
+
+<br>
+
+<section id="favfinds">
+
+  <section class="flex">
+  <img src="Clothes/Princess Style Butterfly Fashion Pink Crystal Bracelets - KC Gold.jpeg" class="gallery"/>
+  <img src="Clothes/╰(_´︶`_)╯♡.jpeg" class="gallery"/>
+  <img src="Clothes/download (4).jpeg" class="gallery"/>
+  </section> <br>
+  <a href="Catalogue.html"><button> Go To Catalog </button></a>
+</section>
+
+
+
+
+<section id="location"> <br>
+  <div id='map' style='width: 1100px; height: 600px; padding: 0;'></div>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiaGFsYXppZGFuIiwiYSI6ImNseWhmZWJ0ODAycm4yaXIzdGM5d3liMWYifQ.vpeu-qxXkOVrKBuQqOkgcg';
+
+    const geojson = {
+      type: 'FeatureCollection',
+      features: [
+        {
+          type: 'Feature',
+          geometry: {
+            type: 'Point',
+            coordinates: [-73.997351, 40.679588]
+          },
+          properties: {
+            title: 'Mapbox',
+            description: 'Court Street, New York'
+          }
+        }
+      ]
+    };
+
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/streets-v11',
+      center: [-73.997351, 40.679588],
+      zoom: 20
+    });
+
+    for (const feature of geojson.features) {
+      new mapboxgl.Marker().setLngLat(feature.geometry.coordinates).addTo(map);
+
+    }
+  </script>
+
+</section>
+
+<section id="contact">
+
+
+    <img src="chels2.png" style="float: left"/>
+  <section id="chelsea" style="text-align: left; padding: 12%;">
+    <h1 style="font-weight: bold; background: #573841; border-radius: 8px; color: lightgoldenrodyellow ">♡ Chelsea @ Codedex ♡</h1>
+    <h3> The Stoop Sale Host</h3>
+    <a href="https://www.instagram.com/p/C9LOM5NuACA/"> <i class="fa fa-instagram"></i>   Chelsea's Instagram </a>
+    <br> <a href="mailto:lillian@codedex.io"> <i class="fa fa-envelope"></i>   chelsea@gmail.com</a>
+  </section>
+
+
+    <img src="lil2.png" style="float: right"/>
+  <section id="lil" style="text-align: right; padding: 12% 6% 12% 6%;">
+    <h1 style="font-weight: bold; background: #573841; border-radius: 8px; color: lightgoldenrodyellow ">♡ Lil @ Codedex ♡</h1>
+    <h3> Head of Operations</h3>
+    <a href="https://www.instagram.com/p/C9LOM5NuACA/">   Lil's Instagram <i class="fa fa-instagram"></i>  </a>
+    <br> <a href="mailto:lillian@codedex.io">   lillian@codedex.io  <i class="fa fa-envelope"></i> </a>
+  </section>
+
+ <a href="#navigation"> <button>Jump To Top</button> </a>
+
+</section>
+
+
+  <script src="js/app.js"></script>
+
+<footer>
+  <p style="background: #573841; color: white; padding: 2%;">Illustrations and Development by Hala Zidan (@glitterberri)</p>
+</footer>
+
+</body>
+
+</html>
