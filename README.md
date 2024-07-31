@@ -3,7 +3,11 @@ The Stoop Sale - Solo submission for Codedex Summer Hackathon 2024 (SOLO HACK WI
 ✨ It's like a garage sale, but better! ✨
 
 This website was design for track 2 of the Codedex Summer Hackathon 2024, "Stoop Sale Invitation"
-![image](https://github.com/user-attachments/assets/bf6e4ef4-22e5-4499-8395-78efa95dfe67)
+Used Medibang paint to illustrate the background + hosts, and deployed on netlify !
+
+
+![image](https://github.com/user-attachments/assets/5851d034-e2a7-469f-98fe-dae9f1d7c35e)
+
 
 
 # Sections
